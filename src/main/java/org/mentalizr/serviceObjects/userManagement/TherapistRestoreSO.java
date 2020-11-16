@@ -5,20 +5,21 @@ import de.arthurpicht.utils.core.strings.Strings;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class TherapistSO {
+public class TherapistRestoreSO {
 
     private String uuid;
     private boolean active;
+    private String firstActive;
+    private String lastActive;
     private String username;
-    private String password;
     private String passwordHash;
     private String email;
+    private String title;
     private String firstname;
     private String lastname;
     private int gender;
-    private String title;
 
-    public TherapistSO() {}
+    public TherapistRestoreSO() {}
 
     public String getUuid() {
         return uuid;
@@ -40,24 +41,28 @@ public class TherapistSO {
         this.active = active;
     }
 
+    public String getFirstActive() {
+        return firstActive;
+    }
+
+    public void setFirstActive(String firstActive) {
+        this.firstActive = firstActive;
+    }
+
+    public String getLastActive() {
+        return lastActive;
+    }
+
+    public void setLastActive(String lastActive) {
+        this.lastActive = lastActive;
+    }
+
     public String getUsername() {
         return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public boolean hasPassword() {
-        return Strings.isNotNullAndNotEmpty(this.password);
     }
 
     public String getPasswordHash() {
