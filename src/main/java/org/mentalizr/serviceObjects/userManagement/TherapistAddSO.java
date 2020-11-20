@@ -5,7 +5,7 @@ import de.arthurpicht.utils.core.strings.Strings;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class TherapistSO {
+public class TherapistAddSO {
 
     private String uuid;
     private boolean active;
@@ -18,7 +18,7 @@ public class TherapistSO {
     private int gender;
     private String title;
 
-    public TherapistSO() {}
+    public TherapistAddSO() {}
 
     public String getUuid() {
         return uuid;
