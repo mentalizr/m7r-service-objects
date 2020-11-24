@@ -3,16 +3,16 @@ package org.mentalizr.serviceObjects;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class SessionStatus {
+public class SessionStatusSO {
 
     private boolean valid;
     private String userRole;
     private String sessionId;
 
-    public SessionStatus() {
+    public SessionStatusSO() {
     }
 
-    public SessionStatus(boolean valid, String userRole, String sessionId) {
+    public SessionStatusSO(boolean valid, String userRole, String sessionId) {
         this.valid = valid;
         this.userRole = userRole;
         this.sessionId = sessionId;
