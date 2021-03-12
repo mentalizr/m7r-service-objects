@@ -1,4 +1,4 @@
-package org.mentalizr.serviceObjects.frontend;
+package org.mentalizr.serviceObjects.frontend.program;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;

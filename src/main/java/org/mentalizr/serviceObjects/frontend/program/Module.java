@@ -1,21 +1,21 @@
-package org.mentalizr.serviceObjects.frontend;
+package org.mentalizr.serviceObjects.frontend.program;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @XmlRootElement
-public class Submodule {
+public class Module {
 
     private String id;
     private String name;
-    private List<Step> steps;
+    private List<Submodule> submodules;
 
-    public Submodule() {}
+    public Module() {}
 
-    public Submodule(String id, String name, List<Step> steps) {
+    public Module(String id, String name, List<Submodule> submodules) {
         this.id = id;
         this.name = name;
-        this.steps = steps;
+        this.submodules = submodules;
     }
 
     public String getId() {
@@ -34,11 +34,11 @@ public class Submodule {
         this.name = name;
     }
 
-    public List<Step> getSteps() {
-        return steps;
+    public List<Submodule> getSubmodules() {
+        return submodules;
     }
 
-    public void setSteps(List<Step> steps) {
-        this.steps = steps;
+    public void setSubmodules(List<Submodule> submodules) {
+        this.submodules = submodules;
     }
 }
