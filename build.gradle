@@ -5,6 +5,12 @@ plugins {
 group 'org.mentalizr'
 version = rootProject.file('version').text.trim()
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
 repositories {
     mavenCentral()
     jcenter()
@@ -20,12 +26,6 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
-    }
 }
 
 test {
