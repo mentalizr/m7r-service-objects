@@ -6,19 +6,19 @@ import javax.json.bind.JsonbConfig;
 
 public class ProgramSOX {
 
-    public static Program fromJson(String json) {
+    public static ProgramSO fromJson(String json) {
         Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, Program.class);
+        return jsonb.fromJson(json, ProgramSO.class);
     }
 
-    public static String toJson(Program program) {
+    public static String toJson(ProgramSO programSO) {
         Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(program);
+        return jsonb.toJson(programSO);
     }
 
-    public static String toJsonWithFormatting(Program program) {
+    public static String toJsonWithFormatting(ProgramSO programSO) {
         Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(program);
+        return jsonb.toJson(programSO);
     }
 
 }

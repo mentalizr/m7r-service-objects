@@ -8,14 +8,14 @@ public class Submodule {
 
     private String id;
     private String name;
-    private List<Step> steps;
+    private List<StepSO> stepSOs;
 
     public Submodule() {}
 
-    public Submodule(String id, String name, List<Step> steps) {
+    public Submodule(String id, String name, List<StepSO> stepSOs) {
         this.id = id;
         this.name = name;
-        this.steps = steps;
+        this.stepSOs = stepSOs;
     }
 
     public String getId() {
@@ -34,11 +34,11 @@ public class Submodule {
         this.name = name;
     }
 
-    public List<Step> getSteps() {
-        return steps;
+    public List<StepSO> getSteps() {
+        return stepSOs;
     }
 
-    public void setSteps(List<Step> steps) {
-        this.steps = steps;
+    public void setSteps(List<StepSO> stepSOs) {
+        this.stepSOs = stepSOs;
     }
 }
