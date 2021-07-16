@@ -1,12 +1,14 @@
-package org.mentalizr.serviceObjects.frontend.application;
+package org.mentalizr.serviceObjects.frontend.patient;
+
+import org.mentalizr.serviceObjects.frontend.application.ApplicationConfigBaseSO;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class ApplicationConfigSO {
+public class ApplicationConfigPatientSO extends ApplicationConfigBaseSO {
 
-    private final String name;
-    private final String logo;
+//    private final String name;
+//    private final String logo;
 
     private boolean program = false;
     private boolean activityDiary = false;
@@ -16,16 +18,17 @@ public class ApplicationConfigSO {
     private boolean messages = false;
     private boolean therapist = false;
 
-    public ApplicationConfigSO(String name, String logo) {
-        this.name = name;
-        this.logo = logo;
+    public ApplicationConfigPatientSO(String name, String logo) {
+        super(name, logo);
+//        this.name = name;
+//        this.logo = logo;
     }
 
     public void setProgram(boolean program) {
         this.program = program;
     }
 
-    public ApplicationConfigSO withProgram() {
+    public ApplicationConfigPatientSO withProgram() {
         this.program = true;
         return this;
     }
@@ -34,12 +37,12 @@ public class ApplicationConfigSO {
         this.activityDiary = activityDiary;
     }
 
-    public ApplicationConfigSO withActivityDiary() {
+    public ApplicationConfigPatientSO withActivityDiary() {
         this.activityDiary = true;
         return this;
     }
 
-    public ApplicationConfigSO withMoodDiary() {
+    public ApplicationConfigPatientSO withMoodDiary() {
         this.moodDiary = true;
         return this;
     }
@@ -48,7 +51,7 @@ public class ApplicationConfigSO {
         this.moodDiary = moodDiary;
     }
 
-    public ApplicationConfigSO withQuestioning() {
+    public ApplicationConfigPatientSO withQuestioning() {
         this.questioning = true;
         return this;
     }
@@ -57,7 +60,7 @@ public class ApplicationConfigSO {
         this.questioning = questioning;
     }
 
-    public ApplicationConfigSO withVideoConference() {
+    public ApplicationConfigPatientSO withVideoConference() {
         this.videoConference = true;
         return this;
     }
@@ -66,7 +69,7 @@ public class ApplicationConfigSO {
         this.videoConference = videoConference;
     }
 
-    public ApplicationConfigSO withMessages() {
+    public ApplicationConfigPatientSO withMessages() {
         this.messages = true;
         return this;
     }
@@ -75,7 +78,7 @@ public class ApplicationConfigSO {
         this.messages = messages;
     }
 
-    public ApplicationConfigSO withTherapist() {
+    public ApplicationConfigPatientSO withTherapist() {
         this.therapist = true;
         return this;
     }
@@ -84,13 +87,13 @@ public class ApplicationConfigSO {
         this.therapist = therapist;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public String getLogo() {
+//        return logo;
+//    }
 
     public boolean isProgram() {
         return program;
