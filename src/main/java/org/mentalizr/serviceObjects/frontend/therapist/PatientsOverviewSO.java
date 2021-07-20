@@ -12,11 +12,11 @@ public class PatientsOverviewSO {
         this.patientOverviewSOList = patientOverviewSOList;
     }
 
-    public List<PatientOverviewSO> getPatientOverviewSOList() {
+    public List<PatientOverviewSO> getPatientOverviews() {
         return patientOverviewSOList;
     }
 
-    public void setPatientOverviewSOList(List<PatientOverviewSO> patientOverviewSOList) {
+    public void setPatientOverviews(List<PatientOverviewSO> patientOverviewSOList) {
         this.patientOverviewSOList = patientOverviewSOList;
     }
 }

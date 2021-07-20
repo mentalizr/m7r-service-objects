@@ -6,7 +6,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class PatientOverviewSO {
 
     private String userId;
-    private String name;
+    private String displayName;
+    private String initials;
     private boolean hasUpdate;
     private String overviewMessage;
     private String lastActiveDate;
@@ -16,23 +17,41 @@ public class PatientOverviewSO {
     public PatientOverviewSO() {
     }
 
-    public PatientOverviewSO(String userId, String name, boolean hasUpdate, String overviewMessage, String lastActiveDate, boolean isReceived) {
+    public PatientOverviewSO(String userId, String displayName, String initials, boolean hasUpdate, String overviewMessage, String lastActiveDate, boolean isReceived) {
         this.userId = userId;
+        this.displayName = displayName;
+        this.initials = initials;
         this.hasUpdate = hasUpdate;
-        this.name = name;
         this.overviewMessage = overviewMessage;
         this.lastActiveDate = lastActiveDate;
         this.hasReceiveStatus = true;
         this.isReceived = isReceived;
     }
 
-    public PatientOverviewSO(String userId, String name, boolean hasUpdate, String overviewMessage, String lastActiveDate) {
+    public PatientOverviewSO(String userId, String displayName, String initials, boolean hasUpdate, String overviewMessage, String lastActiveDate) {
         this.userId = userId;
+        this.displayName = displayName;
+        this.initials = initials;
         this.hasUpdate = hasUpdate;
-        this.name = name;
         this.overviewMessage = overviewMessage;
         this.lastActiveDate = lastActiveDate;
         this.hasReceiveStatus = false;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getInitials() {
+        return initials;
+    }
+
+    public void setInitials(String initials) {
+        this.initials = initials;
     }
 
     public boolean isHasUpdate() {
@@ -43,12 +62,12 @@ public class PatientOverviewSO {
         this.hasUpdate = hasUpdate;
     }
 
-    public String getName() {
-        return name;
+    public String getDisplayName() {
+        return displayName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getOverviewMessage() {
