@@ -9,27 +9,27 @@ public class PatientMessageSO {
     private PatientMessageExerciseSO patientMessageExerciseSO;
     private PatientMessageFeedbackSO patientMessageFeedbackSO;
 
-    public PatientMessagePlainSO getPatientMessagePlainSO() {
+    public PatientMessagePlainSO getPatientMessagePlain() {
         return patientMessagePlainSO;
     }
 
-    public void setPatientMessagePlainSO(PatientMessagePlainSO patientMessagePlainSO) {
+    public void setPatientMessagePlain(PatientMessagePlainSO patientMessagePlainSO) {
         this.patientMessagePlainSO = patientMessagePlainSO;
     }
 
-    public PatientMessageExerciseSO getPatientMessageExerciseSO() {
+    public PatientMessageExerciseSO getPatientMessageExercise() {
         return patientMessageExerciseSO;
     }
 
-    public void setPatientMessageExerciseSO(PatientMessageExerciseSO patientMessageExerciseSO) {
+    public void setPatientMessageExercise(PatientMessageExerciseSO patientMessageExerciseSO) {
         this.patientMessageExerciseSO = patientMessageExerciseSO;
     }
 
-    public PatientMessageFeedbackSO getPatientMessageFeedbackSO() {
+    public PatientMessageFeedbackSO getPatientMessageFeedback() {
         return patientMessageFeedbackSO;
     }
 
-    public void setPatientMessageFeedbackSO(PatientMessageFeedbackSO patientMessageFeedbackSO) {
+    public void setPatientMessageFeedback(PatientMessageFeedbackSO patientMessageFeedbackSO) {
         this.patientMessageFeedbackSO = patientMessageFeedbackSO;
     }
 
