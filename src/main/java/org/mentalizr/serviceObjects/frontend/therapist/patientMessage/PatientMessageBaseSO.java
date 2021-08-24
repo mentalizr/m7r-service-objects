@@ -5,6 +5,7 @@ public class PatientMessageBaseSO {
     protected String senderId;
     protected String date;
     protected boolean isNew;
+    protected boolean isReadByReceiver;
     protected String text;
 
     public String getSenderId() {
@@ -29,6 +30,14 @@ public class PatientMessageBaseSO {
 
     public void setNew(boolean aNew) {
         isNew = aNew;
+    }
+
+    public boolean isReadByReceiver() {
+        return isReadByReceiver;
+    }
+
+    public void setReadByReceiver(boolean readByReceiver) {
+        isReadByReceiver = readByReceiver;
     }
 
     public String getText() {
