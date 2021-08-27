@@ -8,11 +8,11 @@ public class ModuleSO {
 
     private String id;
     private String name;
-    private List<Submodule> submodules;
+    private List<SubmoduleSO> submodules;
 
     public ModuleSO() {}
 
-    public ModuleSO(String id, String name, List<Submodule> submodules) {
+    public ModuleSO(String id, String name, List<SubmoduleSO> submodules) {
         this.id = id;
         this.name = name;
         this.submodules = submodules;
@@ -34,11 +34,11 @@ public class ModuleSO {
         this.name = name;
     }
 
-    public List<Submodule> getSubmodules() {
+    public List<SubmoduleSO> getSubmodules() {
         return submodules;
     }
 
-    public void setSubmodules(List<Submodule> submodules) {
+    public void setSubmodules(List<SubmoduleSO> submodules) {
         this.submodules = submodules;
     }
 }

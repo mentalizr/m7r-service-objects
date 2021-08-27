@@ -4,15 +4,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @XmlRootElement
-public class Submodule {
+public class SubmoduleSO {
 
     private String id;
     private String name;
     private List<StepSO> stepSOs;
 
-    public Submodule() {}
+    public SubmoduleSO() {}
 
-    public Submodule(String id, String name, List<StepSO> stepSOs) {
+    public SubmoduleSO(String id, String name, List<StepSO> stepSOs) {
         this.id = id;
         this.name = name;
         this.stepSOs = stepSOs;
