@@ -7,8 +7,4 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ApplicationConfigTherapistSO extends ApplicationConfigBaseSO {
 
-    public ApplicationConfigTherapistSO(String name, String logo) {
-        super(name, logo);
-    }
-
 }

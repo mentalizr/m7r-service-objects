@@ -2,20 +2,28 @@ package org.mentalizr.serviceObjects.frontend.application;
 
 public abstract class ApplicationConfigBaseSO {
 
-    protected final String name;
-    protected final String logo;
+    protected String name;
+    protected String logo;
 
-    public ApplicationConfigBaseSO(String name, String logo) {
-        this.name = name;
-        this.logo = logo;
+    public ApplicationConfigBaseSO() {
+        this.name = "";
+        this.logo = "";
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getLogo() {
         return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
 }
