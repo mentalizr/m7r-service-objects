@@ -8,6 +8,7 @@ public class ProgramSO {
 
     private String id;
     private String name;
+    private boolean blocking;
     private List<ModuleSO> moduleSOs;
     private List<InfotextSO> infotextSOs;
 
@@ -33,6 +34,14 @@ public class ProgramSO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setBlocking(boolean blocking) {
+        this.blocking = blocking;
+    }
+
+    public boolean isBlocking() {
+        return blocking;
     }
 
     public List<ModuleSO> getModules() {
