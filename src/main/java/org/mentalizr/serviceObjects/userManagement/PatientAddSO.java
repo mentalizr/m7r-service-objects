@@ -17,6 +17,7 @@ public class PatientAddSO {
     private String lastname;
     private int gender;
     private String programId;
+    private boolean blocking;
     private String therapistId;
 
     public PatientAddSO() {}
@@ -111,6 +112,14 @@ public class PatientAddSO {
 
     public void setProgramId(String programId) {
         this.programId = programId;
+    }
+
+    public boolean isBlocking() {
+        return blocking;
+    }
+
+    public void setBlocking(boolean blocking) {
+        this.blocking = blocking;
     }
 
     public String getTherapistId() {
