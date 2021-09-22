@@ -3,6 +3,8 @@ package org.mentalizr.serviceObjects.frontend.patient.formData;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @XmlRootElement
 public class FormDataSO {
@@ -61,6 +63,23 @@ public class FormDataSO {
 
     public void setFormElementDataList(List<FormElementDataSO> formElementDataSOList) {
         this.formElementDataSOList = formElementDataSOList;
+    }
+
+    public List<String> getFormElementDataIds() {
+        return this.formElementDataSOList.stream()
+                .map(FormElementDataSO::getFormElementId)
+                .collect(Collectors.toList());
+    }
+
+    public boolean containsFormElementDataId(String id) {
+        return this.formElementDataSOList.stream()
+                .anyMatch(formElementDataSO -> formElementDataSO.getFormElementId().equals(id));
+    }
+
+    public Optional<FormElementDataSO> getFormElementDataById(String id) {
+        return this.formElementDataSOList.stream()
+                .filter(formElementDataSO -> formElementDataSO.getFormElementId().equals(id))
+                .findFirst();
     }
 
     @Override
