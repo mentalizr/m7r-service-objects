@@ -4,22 +4,17 @@ public class FeedbackSO {
 
     public static final String TEXT = "text";
     public static final String CREATED_TIMESTAMP = "createdTimestamp";
+    public static final String THERAPIST_ID = "therapistId";
     public static final String SEEN_BY_PATIENT = "seenByPatient";
     public static final String SEEN_BY_PATIENT_TIMESTAMP = "seenByPatientTimestamp";
 
     private String text;
     private String createdTimestamp;
+    private String therapistId;
     private boolean seenByPatient;
     private String seenByPatientTimestamp;
 
     public FeedbackSO() {
-    }
-
-    public FeedbackSO(String text, String createdTimestamp, boolean seenByPatient, String seenByPatientTimestamp) {
-        this.text = text;
-        this.createdTimestamp = createdTimestamp;
-        this.seenByPatient = seenByPatient;
-        this.seenByPatientTimestamp = seenByPatientTimestamp;
     }
 
     public String getText() {
@@ -36,6 +31,14 @@ public class FeedbackSO {
 
     public void setCreatedTimestamp(String createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
+    }
+
+    public String getTherapistId() {
+        return therapistId;
+    }
+
+    public void setTherapistId(String therapistId) {
+        this.therapistId = therapistId;
     }
 
     public boolean isSeenByPatient() {
