@@ -8,6 +8,7 @@ public class SubmoduleSO {
 
     private String id;
     private String name;
+    private boolean accessible = true;
     private List<StepSO> stepSOs;
 
     public SubmoduleSO() {}
@@ -32,6 +33,14 @@ public class SubmoduleSO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isAccessible() {
+        return accessible;
+    }
+
+    public void setAccessible(boolean accessible) {
+        this.accessible = accessible;
     }
 
     public List<StepSO> getSteps() {
