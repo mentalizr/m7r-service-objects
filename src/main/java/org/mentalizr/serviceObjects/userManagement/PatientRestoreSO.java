@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class PatientRestoreSO {
 
-    private String uuid;
+    private String userId;
     private boolean active;
     private String firstActive;
     private String lastActive;
@@ -23,16 +23,16 @@ public class PatientRestoreSO {
 
     public PatientRestoreSO() {}
 
-    public String getUuid() {
-        return uuid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public boolean hasUuid() {
-        return Strings.isNotNullAndNotEmpty(this.uuid);
+        return Strings.isNotNullAndNotEmpty(this.userId);
     }
 
     public boolean isActive() {

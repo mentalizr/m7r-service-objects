@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class AccessKeyRestoreSO {
 
-    private String id;
+    private String userId;
     private boolean active;
     private String firstActive;
     private String lastActive;
@@ -15,12 +15,12 @@ public class AccessKeyRestoreSO {
 
     public AccessKeyRestoreSO() {}
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public boolean isActive() {
