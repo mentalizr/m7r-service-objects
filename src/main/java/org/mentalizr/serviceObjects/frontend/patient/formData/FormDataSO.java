@@ -59,11 +59,11 @@ public class FormDataSO {
         this.editable = editable;
     }
 
-    public ExerciseSO getExerciseSO() {
+    public ExerciseSO getExercise() {
         return exerciseSO;
     }
 
-    public void setExerciseSO(ExerciseSO exerciseSO) {
+    public void setExercise(ExerciseSO exerciseSO) {
         this.exerciseSO = exerciseSO;
     }
 
@@ -75,11 +75,11 @@ public class FormDataSO {
         this.formElementDataSOList = formElementDataSOList;
     }
 
-    public FeedbackSO getFeedbackSO() {
+    public FeedbackSO getFeedback() {
         return feedbackSO;
     }
 
-    public void setFeedbackSO(FeedbackSO feedbackSO) {
+    public void setFeedback(FeedbackSO feedbackSO) {
         this.feedbackSO = feedbackSO;
     }
 

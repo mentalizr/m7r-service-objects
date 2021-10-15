@@ -24,15 +24,15 @@ public class FormDataSOs {
     }
 
     public static boolean isExercise(FormDataSO formDataSO) {
-        return formDataSO.getExerciseSO() != null;
+        return formDataSO.getExercise() != null;
     }
 
     public static boolean isSent(FormDataSO formDataSO) {
-        return formDataSO.getExerciseSO() != null && formDataSO.getExerciseSO().isSent();
+        return formDataSO.getExercise() != null && formDataSO.getExercise().isSent();
     }
 
     public static boolean hasFeedback(FormDataSO formDataSO) {
-        return formDataSO.getFeedbackSO() != null;
+        return formDataSO.getFeedback() != null;
     }
 
 }

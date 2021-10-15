@@ -1,5 +1,8 @@
 package org.mentalizr.serviceObjects.frontend.patient.formData;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class ExerciseSO {
 
     public static final String SENT = "sent";
