@@ -9,14 +9,12 @@ public class FormDataSO {
 
     public static final String USER_ID = "userId";
     public static final String CONTENT_ID = "contentId";
-    public static final String EDITABLE = "editable";
     public static final String EXERCISE = "exercise";
     public static final String FORM_ELEMENT_DATA_LIST = "formElementDataList";
     public static final String FEEDBACK = "feedback";
 
     private String userId;
     private String contentId;
-    private boolean editable;
     private ExerciseSO exerciseSO = null;
     private List<FormElementDataSO> formElementDataSOList;
     private FeedbackSO feedbackSO = null;
@@ -24,14 +22,12 @@ public class FormDataSO {
     public FormDataSO() {
         this.userId = "";
         this.contentId = "";
-        this.editable = true;
         this.formElementDataSOList = new ArrayList<>();
     }
 
-    public FormDataSO(String userId, String contentId, boolean editable, List<FormElementDataSO> formElementDataSOList) {
+    public FormDataSO(String userId, String contentId, List<FormElementDataSO> formElementDataSOList) {
         this.userId = userId;
         this.contentId = contentId;
-        this.editable = editable;
         this.formElementDataSOList = formElementDataSOList;
     }
 
@@ -49,14 +45,6 @@ public class FormDataSO {
 
     public void setContentId(String contentId) {
         this.contentId = contentId;
-    }
-
-    public boolean isEditable() {
-        return editable;
-    }
-
-    public void setEditable(boolean editable) {
-        this.editable = editable;
     }
 
     public ExerciseSO getExercise() {
