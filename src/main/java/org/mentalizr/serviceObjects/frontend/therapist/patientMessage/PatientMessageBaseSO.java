@@ -2,12 +2,21 @@ package org.mentalizr.serviceObjects.frontend.therapist.patientMessage;
 
 public class PatientMessageBaseSO {
 
+    protected String messageId;
     protected long timestamp;
     protected String senderId;
     protected String date;
     protected boolean isNew;
     protected boolean isReadByReceiver;
     protected String text;
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
 
     public long getTimestamp() {
         return timestamp;
