@@ -16,6 +16,10 @@ public class PatientAddSO {
     private String firstname;
     private String lastname;
     private int gender;
+    private boolean require2FA;
+    private boolean requireEmailConfirmation;
+    private boolean requireRenewPassword;
+    private boolean requirePolicyConsent;
     private String programId;
     private boolean blocking;
     private String therapistId;
@@ -104,6 +108,38 @@ public class PatientAddSO {
 
     public void setGender(int gender) {
         this.gender = gender;
+    }
+
+    public boolean isRequire2FA() {
+        return require2FA;
+    }
+
+    public void setRequire2FA(boolean require2FA) {
+        this.require2FA = require2FA;
+    }
+
+    public boolean isRequireEmailConfirmation() {
+        return requireEmailConfirmation;
+    }
+
+    public void setRequireEmailConfirmation(boolean requireEmailConfirmation) {
+        this.requireEmailConfirmation = requireEmailConfirmation;
+    }
+
+    public boolean isRequireRenewPassword() {
+        return requireRenewPassword;
+    }
+
+    public void setRequireRenewPassword(boolean requireRenewPassword) {
+        this.requireRenewPassword = requireRenewPassword;
+    }
+
+    public boolean isRequirePolicyConsent() {
+        return requirePolicyConsent;
+    }
+
+    public void setRequirePolicyConsent(boolean requirePolicyConsent) {
+        this.requirePolicyConsent = requirePolicyConsent;
     }
 
     public String getProgramId() {
