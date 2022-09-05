@@ -9,8 +9,9 @@ public class TherapistRestoreSO {
 
     private String userId;
     private boolean active;
-    private String firstActive;
-    private String lastActive;
+    private Long firstActive;
+    private Long lastActive;
+    private Long policyConsent;
     private String username;
     private String passwordHash;
     private String email;
@@ -18,6 +19,11 @@ public class TherapistRestoreSO {
     private String firstname;
     private String lastname;
     private int gender;
+    private boolean secondFA;
+    private Long emailConfirmation;
+    private String emailConfToken;
+    private String emailConfCode;
+    private boolean renewPasswordRequired;
 
     public TherapistRestoreSO() {}
 
@@ -41,20 +47,28 @@ public class TherapistRestoreSO {
         this.active = active;
     }
 
-    public String getFirstActive() {
-        return firstActive;
+    public Long getFirstActive() {
+        return this.firstActive;
     }
 
-    public void setFirstActive(String firstActive) {
+    public void setFirstActive(Long firstActive) {
         this.firstActive = firstActive;
     }
 
-    public String getLastActive() {
-        return lastActive;
+    public Long getLastActive() {
+        return this.lastActive;
     }
 
-    public void setLastActive(String lastActive) {
+    public void setLastActive(Long lastActive) {
         this.lastActive = lastActive;
+    }
+
+    public Long getPolicyConsent() {
+        return policyConsent;
+    }
+
+    public void setPolicyConsent(Long policyConsent) {
+        this.policyConsent = policyConsent;
     }
 
     public String getUsername() {
@@ -109,6 +123,46 @@ public class TherapistRestoreSO {
         this.gender = gender;
     }
 
+    public boolean isSecondFA() {
+        return secondFA;
+    }
+
+    public void setSecondFA(boolean secondFA) {
+        this.secondFA = secondFA;
+    }
+
+    public Long getEmailConfirmation() {
+        return emailConfirmation;
+    }
+
+    public void setEmailConfirmation(Long emailConfirmation) {
+        this.emailConfirmation = emailConfirmation;
+    }
+
+    public String getEmailConfToken() {
+        return emailConfToken;
+    }
+
+    public void setEmailConfToken(String emailConfToken) {
+        this.emailConfToken = emailConfToken;
+    }
+
+    public String getEmailConfCode() {
+        return emailConfCode;
+    }
+
+    public void setEmailConfCode(String emailConfCode) {
+        this.emailConfCode = emailConfCode;
+    }
+
+    public boolean isRenewPasswordRequired() {
+        return renewPasswordRequired;
+    }
+
+    public void setRenewPasswordRequired(boolean renewPasswordRequired) {
+        this.renewPasswordRequired = renewPasswordRequired;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -116,4 +170,6 @@ public class TherapistRestoreSO {
     public void setTitle(String title) {
         this.title = title;
     }
+
+
 }
