@@ -3,6 +3,7 @@ package org.mentalizr.serviceObjects.userManagement;
 import de.arthurpicht.utils.core.strings.Strings;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Objects;
 
 @XmlRootElement
 public class PatientRestoreSO {
@@ -187,6 +188,19 @@ public class PatientRestoreSO {
 
     public void setTherapistId(String therapistId) {
         this.therapistId = therapistId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PatientRestoreSO that = (PatientRestoreSO) o;
+        return active == that.active && gender == that.gender && secondFA == that.secondFA && renewPasswordRequired == that.renewPasswordRequired && blocking == that.blocking && userId.equals(that.userId) && Objects.equals(firstActive, that.firstActive) && Objects.equals(lastActive, that.lastActive) && Objects.equals(policyConsent, that.policyConsent) && username.equals(that.username) && passwordHash.equals(that.passwordHash) && email.equals(that.email) && firstname.equals(that.firstname) && lastname.equals(that.lastname) && Objects.equals(emailConfirmation, that.emailConfirmation) && Objects.equals(emailConfToken, that.emailConfToken) && Objects.equals(emailConfCode, that.emailConfCode) && programId.equals(that.programId) && therapistId.equals(that.therapistId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId);
     }
 
 }
