@@ -8,10 +8,6 @@ public class SessionStatusSO {
     public static final String STATUS_VALID = "VALID";
     public static final String STATUS_INVALID = "INVALID";
     public static final String STATUS_INTERMEDIATE = "INTERMEDIATE";
-    public static final String REQUIRE_POLICY_CONSENT = "POLICY_CONSENT";
-    public static final String REQUIRE_RENEW_PASSWORD = "RENEW_PASSWORD";
-    public static final String REQUIRE_EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION";
-    public static final String REQUIRE_2FA = "2FA";
 
     private String status;
     private String userRole;
