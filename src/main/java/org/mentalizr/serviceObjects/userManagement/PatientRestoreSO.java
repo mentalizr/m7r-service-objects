@@ -12,7 +12,6 @@ public class PatientRestoreSO {
     private boolean active;
     private Long firstActive;
     private Long lastActive;
-    private Long policyConsent;
     private String username;
     private String passwordHash;
     private String email;
@@ -64,14 +63,6 @@ public class PatientRestoreSO {
 
     public void setLastActive(Long lastActive) {
         this.lastActive = lastActive;
-    }
-
-    public Long getPolicyConsent() {
-        return policyConsent;
-    }
-
-    public void setPolicyConsent(Long policyConsent) {
-        this.policyConsent = policyConsent;
     }
 
     public String getUsername() {
@@ -195,7 +186,7 @@ public class PatientRestoreSO {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PatientRestoreSO that = (PatientRestoreSO) o;
-        return active == that.active && gender == that.gender && secondFA == that.secondFA && renewPasswordRequired == that.renewPasswordRequired && blocking == that.blocking && userId.equals(that.userId) && Objects.equals(firstActive, that.firstActive) && Objects.equals(lastActive, that.lastActive) && Objects.equals(policyConsent, that.policyConsent) && username.equals(that.username) && passwordHash.equals(that.passwordHash) && email.equals(that.email) && firstname.equals(that.firstname) && lastname.equals(that.lastname) && Objects.equals(emailConfirmation, that.emailConfirmation) && Objects.equals(emailConfToken, that.emailConfToken) && Objects.equals(emailConfCode, that.emailConfCode) && programId.equals(that.programId) && therapistId.equals(that.therapistId);
+        return active == that.active && gender == that.gender && secondFA == that.secondFA && renewPasswordRequired == that.renewPasswordRequired && blocking == that.blocking && userId.equals(that.userId) && Objects.equals(firstActive, that.firstActive) && Objects.equals(lastActive, that.lastActive) && username.equals(that.username) && passwordHash.equals(that.passwordHash) && email.equals(that.email) && firstname.equals(that.firstname) && lastname.equals(that.lastname) && Objects.equals(emailConfirmation, that.emailConfirmation) && Objects.equals(emailConfToken, that.emailConfToken) && Objects.equals(emailConfCode, that.emailConfCode) && programId.equals(that.programId) && therapistId.equals(that.therapistId);
     }
 
     @Override

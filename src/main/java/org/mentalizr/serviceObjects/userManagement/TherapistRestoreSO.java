@@ -11,7 +11,6 @@ public class TherapistRestoreSO {
     private boolean active;
     private Long firstActive;
     private Long lastActive;
-    private Long policyConsent;
     private String username;
     private String passwordHash;
     private String email;
@@ -61,14 +60,6 @@ public class TherapistRestoreSO {
 
     public void setLastActive(Long lastActive) {
         this.lastActive = lastActive;
-    }
-
-    public Long getPolicyConsent() {
-        return policyConsent;
-    }
-
-    public void setPolicyConsent(Long policyConsent) {
-        this.policyConsent = policyConsent;
     }
 
     public String getUsername() {
