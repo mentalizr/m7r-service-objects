@@ -16,6 +16,11 @@ public class TherapistAddSO {
     private String firstname;
     private String lastname;
     private int gender;
+    private boolean require2FA;
+    private boolean requireEmailConfirmation;
+    private boolean requireRenewPassword;
+    private boolean requirePolicyConsent;
+
     private String title;
 
     public TherapistAddSO() {}
@@ -110,5 +115,37 @@ public class TherapistAddSO {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean isRequire2FA() {
+        return require2FA;
+    }
+
+    public void setRequire2FA(boolean require2FA) {
+        this.require2FA = require2FA;
+    }
+
+    public boolean isRequireEmailConfirmation() {
+        return requireEmailConfirmation;
+    }
+
+    public void setRequireEmailConfirmation(boolean requireEmailConfirmation) {
+        this.requireEmailConfirmation = requireEmailConfirmation;
+    }
+
+    public boolean isRequireRenewPassword() {
+        return requireRenewPassword;
+    }
+
+    public void setRequireRenewPassword(boolean requireRenewPassword) {
+        this.requireRenewPassword = requireRenewPassword;
+    }
+
+    public boolean isRequirePolicyConsent() {
+        return requirePolicyConsent;
+    }
+
+    public void setRequirePolicyConsent(boolean requirePolicyConsent) {
+        this.requirePolicyConsent = requirePolicyConsent;
     }
 }

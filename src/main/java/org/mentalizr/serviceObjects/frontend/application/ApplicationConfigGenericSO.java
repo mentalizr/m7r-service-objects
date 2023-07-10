@@ -5,17 +5,20 @@ public class ApplicationConfigGenericSO {
     protected String title;
     protected String logo;
     protected String defaultLoginScreen;
+    protected String policyVersion;
 
     public ApplicationConfigGenericSO() {
         this.title = "";
         this.logo = "";
         this.defaultLoginScreen = "";
+        this.policyVersion = "";
     }
 
-    public ApplicationConfigGenericSO(String title, String logo, String defaultLoginScreen) {
+    public ApplicationConfigGenericSO(String title, String logo, String defaultLoginScreen, String policyVersion) {
         this.title = title;
         this.logo = logo;
         this.defaultLoginScreen = defaultLoginScreen;
+        this.policyVersion = policyVersion;
     }
 
     public String getTitle() {
@@ -42,4 +45,11 @@ public class ApplicationConfigGenericSO {
         this.defaultLoginScreen = defaultLoginScreen;
     }
 
+    public String getPolicyVersion() {
+        return policyVersion;
+    }
+
+    public void setPolicyVersion(String policyVersion) {
+        this.policyVersion = policyVersion;
+    }
 }

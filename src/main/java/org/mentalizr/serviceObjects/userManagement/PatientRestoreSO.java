@@ -3,20 +3,26 @@ package org.mentalizr.serviceObjects.userManagement;
 import de.arthurpicht.utils.core.strings.Strings;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Objects;
 
 @XmlRootElement
 public class PatientRestoreSO {
 
     private String userId;
     private boolean active;
-    private String firstActive;
-    private String lastActive;
+    private Long firstActive;
+    private Long lastActive;
     private String username;
     private String passwordHash;
     private String email;
     private String firstname;
     private String lastname;
     private int gender;
+    private boolean secondFA;
+    private Long emailConfirmation;
+    private String emailConfToken;
+    private String emailConfCode;
+    private boolean renewPasswordRequired;
     private String programId;
     private boolean blocking;
     private String therapistId;
@@ -43,19 +49,19 @@ public class PatientRestoreSO {
         this.active = active;
     }
 
-    public String getFirstActive() {
-        return firstActive;
+    public Long getFirstActive() {
+        return this.firstActive;
     }
 
-    public void setFirstActive(String firstActive) {
+    public void setFirstActive(Long firstActive) {
         this.firstActive = firstActive;
     }
 
-    public String getLastActive() {
-        return lastActive;
+    public Long getLastActive() {
+        return this.lastActive;
     }
 
-    public void setLastActive(String lastActive) {
+    public void setLastActive(Long lastActive) {
         this.lastActive = lastActive;
     }
 
@@ -111,6 +117,46 @@ public class PatientRestoreSO {
         this.gender = gender;
     }
 
+    public boolean isSecondFA() {
+        return secondFA;
+    }
+
+    public void setSecondFA(boolean secondFA) {
+        this.secondFA = secondFA;
+    }
+
+    public Long getEmailConfirmation() {
+        return emailConfirmation;
+    }
+
+    public void setEmailConfirmation(Long emailConfirmation) {
+        this.emailConfirmation = emailConfirmation;
+    }
+
+    public String getEmailConfToken() {
+        return emailConfToken;
+    }
+
+    public void setEmailConfToken(String emailConfToken) {
+        this.emailConfToken = emailConfToken;
+    }
+
+    public String getEmailConfCode() {
+        return emailConfCode;
+    }
+
+    public void setEmailConfCode(String emailConfCode) {
+        this.emailConfCode = emailConfCode;
+    }
+
+    public boolean isRenewPasswordRequired() {
+        return renewPasswordRequired;
+    }
+
+    public void setRenewPasswordRequired(boolean renewPasswordRequired) {
+        this.renewPasswordRequired = renewPasswordRequired;
+    }
+
     public String getProgramId() {
         return programId;
     }
@@ -133,6 +179,19 @@ public class PatientRestoreSO {
 
     public void setTherapistId(String therapistId) {
         this.therapistId = therapistId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PatientRestoreSO that = (PatientRestoreSO) o;
+        return active == that.active && gender == that.gender && secondFA == that.secondFA && renewPasswordRequired == that.renewPasswordRequired && blocking == that.blocking && userId.equals(that.userId) && Objects.equals(firstActive, that.firstActive) && Objects.equals(lastActive, that.lastActive) && username.equals(that.username) && passwordHash.equals(that.passwordHash) && email.equals(that.email) && firstname.equals(that.firstname) && lastname.equals(that.lastname) && Objects.equals(emailConfirmation, that.emailConfirmation) && Objects.equals(emailConfToken, that.emailConfToken) && Objects.equals(emailConfCode, that.emailConfCode) && programId.equals(that.programId) && therapistId.equals(that.therapistId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId);
     }
 
 }
