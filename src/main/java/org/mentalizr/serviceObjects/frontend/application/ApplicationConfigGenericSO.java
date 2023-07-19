@@ -2,23 +2,34 @@ package org.mentalizr.serviceObjects.frontend.application;
 
 public class ApplicationConfigGenericSO {
 
+    protected String domainName;
     protected String title;
     protected String logo;
     protected String defaultLoginScreen;
     protected String policyVersion;
 
     public ApplicationConfigGenericSO() {
+        this.domainName = "";
         this.title = "";
         this.logo = "";
         this.defaultLoginScreen = "";
         this.policyVersion = "";
     }
 
-    public ApplicationConfigGenericSO(String title, String logo, String defaultLoginScreen, String policyVersion) {
+    public ApplicationConfigGenericSO(String domainName, String title, String logo, String defaultLoginScreen, String policyVersion) {
+        this.domainName = domainName;
         this.title = title;
         this.logo = logo;
         this.defaultLoginScreen = defaultLoginScreen;
         this.policyVersion = policyVersion;
+    }
+
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public void setDomainName(String domainName) {
+        this.domainName = domainName;
     }
 
     public String getTitle() {
