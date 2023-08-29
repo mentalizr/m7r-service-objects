@@ -7,8 +7,9 @@ public class AccessKeyRestoreSO {
 
     private String userId;
     private boolean active;
-    private String firstActive;
-    private String lastActive;
+    private Long creation;
+    private Long firstActive;
+    private Long lastActive;
     private String accessKey;
     private String programId;
     private String therapistId;
@@ -31,19 +32,27 @@ public class AccessKeyRestoreSO {
         this.active = active;
     }
 
-    public String getFirstActive() {
+    public Long getCreation() {
+        return creation;
+    }
+
+    public void setCreation(Long creation) {
+        this.creation = creation;
+    }
+
+    public Long getFirstActive() {
         return firstActive;
     }
 
-    public void setFirstActive(String firstActive) {
+    public void setFirstActive(Long firstActive) {
         this.firstActive = firstActive;
     }
 
-    public String getLastActive() {
+    public Long getLastActive() {
         return lastActive;
     }
 
-    public void setLastActive(String lastActive) {
+    public void setLastActive(Long lastActive) {
         this.lastActive = lastActive;
     }
 

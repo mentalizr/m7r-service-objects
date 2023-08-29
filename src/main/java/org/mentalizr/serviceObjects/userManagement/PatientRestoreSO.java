@@ -10,6 +10,7 @@ public class PatientRestoreSO {
 
     private String userId;
     private boolean active;
+    private Long creation;
     private Long firstActive;
     private Long lastActive;
     private String username;
@@ -47,6 +48,14 @@ public class PatientRestoreSO {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public Long getCreation() {
+        return creation;
+    }
+
+    public void setCreation(Long creation) {
+        this.creation = creation;
     }
 
     public Long getFirstActive() {

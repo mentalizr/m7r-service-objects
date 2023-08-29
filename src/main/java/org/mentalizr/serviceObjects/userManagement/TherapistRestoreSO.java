@@ -9,6 +9,7 @@ public class TherapistRestoreSO {
 
     private String userId;
     private boolean active;
+    private Long creation;
     private Long firstActive;
     private Long lastActive;
     private String username;
@@ -44,6 +45,14 @@ public class TherapistRestoreSO {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public Long getCreation() {
+        return creation;
+    }
+
+    public void setCreation(Long creation) {
+        this.creation = creation;
     }
 
     public Long getFirstActive() {
