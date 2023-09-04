@@ -9,9 +9,9 @@ public class ChangePasswordSO {
 
     public ChangePasswordSO() {}
 
-    public ChangePasswordSO(String password) {
-        this.password = password;
-    }
+//    public ChangePasswordSO(String password) {
+//        this.password = password;
+//    }
 
     public String getPassword() {
         return password;
