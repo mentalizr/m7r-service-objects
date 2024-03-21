@@ -38,7 +38,7 @@ public class ActivityStatusMessageSO {
         return timestampValue;
     }
 
-    public void setTimestamp(long timestampValue) {
+    public void setTimestamp(Long timestampValue) {
         this.timestampValue = timestampValue;
     }
 
