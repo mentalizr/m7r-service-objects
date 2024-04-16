@@ -73,4 +73,11 @@ public class ActivityStatusMessageSO {
     public void setMessage(String messageValue) {
         this.messageValue = messageValue;
     }
+
+    public String toString() {
+        if(this.messageValue.isEmpty()) {
+            return String.format("%s | %s", this.userIdValue, this.restIdValue);
+        }
+        return String.format("%s | %s | %s", this.userIdValue, this.restIdValue, this.messageValue);
+    }
 }
