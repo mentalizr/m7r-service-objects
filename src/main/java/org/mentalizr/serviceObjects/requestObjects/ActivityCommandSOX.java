@@ -6,18 +6,18 @@ import javax.json.bind.JsonbConfig;
 
 public class ActivityCommandSOX {
 
-    public static ActivityCommandSO fromJson(String json) {
+    public static ActivityQuerySO fromJson(String json) {
         Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, ActivityCommandSO.class);
+        return jsonb.fromJson(json, ActivityQuerySO.class);
     }
 
-    public static String toJson(ActivityCommandSO activityCommandSO) {
+    public static String toJson(ActivityQuerySO activityQuerySO) {
         Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(activityCommandSO);
+        return jsonb.toJson(activityQuerySO);
     }
 
-    public static String toJsonWithFormatting(ActivityCommandSO activityCommandSO) {
+    public static String toJsonWithFormatting(ActivityQuerySO activityQuerySO) {
         Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(activityCommandSO);
+        return jsonb.toJson(activityQuerySO);
     }
 }

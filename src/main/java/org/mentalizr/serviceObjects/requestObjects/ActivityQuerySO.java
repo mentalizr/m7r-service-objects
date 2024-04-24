@@ -1,23 +1,23 @@
 package org.mentalizr.serviceObjects.requestObjects;
 
-public class ActivityCommandSO {
+public class ActivityQuerySO {
     private Long fromTimestamp;
     private Long untilTimestamp;
     private String userId;
 
-    public ActivityCommandSO() {
+    public ActivityQuerySO() {
         this.userId = "";
         this.fromTimestamp = 0L;
         this.untilTimestamp = 0L;
     }
 
-    public ActivityCommandSO(String userId) {
+    public ActivityQuerySO(String userId) {
         this.userId = userId;
         this.fromTimestamp = 0L;
         this.untilTimestamp = 0L;
     }
 
-    public ActivityCommandSO(Long fromTimestamp, Long untilTimestamp, String userId) {
+    public ActivityQuerySO(Long fromTimestamp, Long untilTimestamp, String userId) {
         this.fromTimestamp = fromTimestamp;
         this.untilTimestamp = untilTimestamp;
         this.userId = userId;
