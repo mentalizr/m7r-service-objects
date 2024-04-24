@@ -76,8 +76,8 @@ public class ActivityStatusMessageSO {
 
     public String toString() {
         if(this.messageValue.isEmpty()) {
-            return String.format("%s | %s", this.userIdValue, this.restIdValue);
+            return String.format("%s _ %s", this.userIdValue, this.restIdValue.replace("/","-"));
         }
-        return String.format("%s | %s | %s", this.userIdValue, this.restIdValue, this.messageValue);
+        return String.format("%s _ %s _ %s", this.userIdValue, this.restIdValue.replace("/","-"), this.messageValue);
     }
 }
