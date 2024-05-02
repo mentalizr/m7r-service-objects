@@ -1,6 +1,7 @@
 package org.mentalizr.serviceObjects.userManagement;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Objects;
 
 @XmlRootElement
 public class ActivityStatusMessageSO {
@@ -80,4 +81,6 @@ public class ActivityStatusMessageSO {
         }
         return String.format("%s _ %s _ %s", this.userIdValue, this.restIdValue.replace("/","-"), this.messageValue);
     }
+
+
 }
