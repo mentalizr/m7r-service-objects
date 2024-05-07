@@ -2,16 +2,19 @@ package org.mentalizr.serviceObjects.userManagement;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
+import java.util.UUID;
 
 @XmlRootElement
 public class ActivityStatusMessageSO {
 
+    public static final String id = "id";
     public static final String TIMESTAMP = "timestamp";
     public static final String USER_ID = "userid";
     public static final String REST_ID = "restid";
     public static final String ROLE = "role";
     public static final String MESSAGE = "message";
 
+    private String idValue;
     private Long timestampValue;
     private String userIdValue;
     private String restIdValue;
@@ -19,6 +22,7 @@ public class ActivityStatusMessageSO {
     private String messageValue;
 
     public ActivityStatusMessageSO() {
+        this.idValue = UUID.randomUUID().toString();
         this.timestampValue = 0L;
         this.userIdValue = "";
         this.restIdValue = "";
@@ -28,11 +32,20 @@ public class ActivityStatusMessageSO {
 
     public ActivityStatusMessageSO(Long timestamp, String userId,
                                    String restId, String role, String message) {
+        this.idValue = UUID.randomUUID().toString();
         this.timestampValue = timestamp;
         this.userIdValue = userId;
         this.restIdValue = restId;
         this.roleValue = role;
         this.messageValue = message;
+    }
+
+    public String getIdValue() {
+        return idValue;
+    }
+
+    public void setIdValue(String idValue) {
+        this.idValue = idValue;
     }
 
     public Long getTimestamp() {
