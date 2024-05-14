@@ -8,13 +8,13 @@ public class ActivityQuerySO {
     public ActivityQuerySO() {
         this.userId = "";
         this.fromTimestamp = 0L;
-        this.untilTimestamp = 0L;
+        this.untilTimestamp = Long.MAX_VALUE;
     }
 
     public ActivityQuerySO(String userId) {
         this.userId = userId;
         this.fromTimestamp = 0L;
-        this.untilTimestamp = 0L;
+        this.untilTimestamp = Long.MAX_VALUE;
     }
 
     public ActivityQuerySO(Long fromTimestamp, Long untilTimestamp, String userId) {
