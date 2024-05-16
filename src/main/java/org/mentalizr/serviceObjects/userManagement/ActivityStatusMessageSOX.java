@@ -6,18 +6,18 @@ import javax.json.bind.JsonbConfig;
 
 public class ActivityStatusMessageSOX {
 
-    public static ActivityStatusMessageSO fromJson(String json) {
+    public static ActivityMessageSO fromJson(String json) {
         Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, ActivityStatusMessageSO.class);
+        return jsonb.fromJson(json, ActivityMessageSO.class);
     }
 
-    public String toJson(ActivityStatusMessageSO activityStatusMessageSO) {
+    public String toJson(ActivityMessageSO activityMessageSO) {
         Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(activityStatusMessageSO);
+        return jsonb.toJson(activityMessageSO);
     }
 
-    public static String toJsonWithFormatting(ActivityStatusMessageSO activityStatusMessageSO) {
+    public static String toJsonWithFormatting(ActivityMessageSO activityMessageSO) {
         Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(activityStatusMessageSO);
+        return jsonb.toJson(activityMessageSO);
     }
 }

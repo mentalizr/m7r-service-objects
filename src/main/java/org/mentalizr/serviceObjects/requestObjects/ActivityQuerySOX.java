@@ -4,7 +4,7 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 
-public class ActivityCommandSOX {
+public class ActivityQuerySOX {
 
     public static ActivityQuerySO fromJson(String json) {
         Jsonb jsonb = JsonbBuilder.create();
