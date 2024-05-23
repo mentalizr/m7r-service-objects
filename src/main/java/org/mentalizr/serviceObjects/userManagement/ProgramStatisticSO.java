@@ -8,6 +8,11 @@ public class ProgramStatisticSO {
     private int interactionMax;
 
     public ProgramStatisticSO() {
+        this.programName = "";
+        this.user = 0;
+        this.interactionAvg = 0;
+        this.interactionMin = 0;
+        this.interactionMax = 0;
     }
 
     public ProgramStatisticSO(String programName,
