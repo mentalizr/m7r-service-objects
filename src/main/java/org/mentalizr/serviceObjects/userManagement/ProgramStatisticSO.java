@@ -3,7 +3,7 @@ package org.mentalizr.serviceObjects.userManagement;
 public class ProgramStatisticSO {
     private String programName;
     private int user;
-    private int interactionAvg;
+    private double interactionAvg;
     private int interactionMin;
     private int interactionMax;
 
@@ -15,11 +15,13 @@ public class ProgramStatisticSO {
         this.interactionMax = 0;
     }
 
-    public ProgramStatisticSO(String programName,
-                            int user,
-                            int interactionAvg,
-                            int interactionMin,
-                            int interactionMax) {
+    public ProgramStatisticSO(
+            String programName,
+            int user,
+            double interactionAvg,
+            int interactionMin,
+            int interactionMax
+    ) {
         this.programName = programName;
         this.user = user;
         this.interactionAvg = interactionAvg;
@@ -28,7 +30,7 @@ public class ProgramStatisticSO {
     }
 
     public String getProgramName() {
-        return programName;
+        return this.programName;
     }
 
     public void setProgramName(String programName) {
@@ -36,18 +38,18 @@ public class ProgramStatisticSO {
     }
 
     public int getUser() {
-        return user;
+        return this.user;
     }
 
     public void setUser(int user) {
         this.user = user;
     }
 
-    public int getInteractionAvg() {
-        return interactionAvg;
+    public double getInteractionAvg() {
+        return this.interactionAvg;
     }
 
-    public void setInteractionAvg(int interactionAvg) {
+    public void setInteractionAvg(double interactionAvg) {
         this.interactionAvg = interactionAvg;
     }
 
@@ -60,10 +62,11 @@ public class ProgramStatisticSO {
     }
 
     public int getInteractionMax() {
-        return interactionMax;
+        return this.interactionMax;
     }
 
     public void setInteractionMax(int interactionMax) {
         this.interactionMax = interactionMax;
     }
+
 }
