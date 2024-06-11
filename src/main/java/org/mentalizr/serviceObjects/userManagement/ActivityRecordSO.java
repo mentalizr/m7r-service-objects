@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 @XmlRootElement
-public class ActivityMessageSO {
+public class ActivityRecordSO {
 
     public static final String ID = "id";
     public static final String TIMESTAMP = "timestamp";
@@ -21,7 +21,7 @@ public class ActivityMessageSO {
     private String role;
     private String message;
 
-    public ActivityMessageSO() {
+    public ActivityRecordSO() {
         this.id = UUID.randomUUID().toString();
         this.timestamp = 0L;
         this.userId = "";
@@ -90,7 +90,7 @@ public class ActivityMessageSO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ActivityMessageSO that = (ActivityMessageSO) o;
+        ActivityRecordSO that = (ActivityRecordSO) o;
         return Objects.equals(id, that.id);
     }
 

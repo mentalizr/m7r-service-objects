@@ -5,19 +5,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @XmlRootElement
-public class ActivityStatusMessageCollectionSO {
+public class ActivityRecordCollectionSO {
 
-    private List<ActivityMessageSO> collection;
+    private List<ActivityRecordSO> collection;
 
-    public ActivityStatusMessageCollectionSO() {
+    public ActivityRecordCollectionSO() {
         this.collection = new ArrayList<>();
     }
 
-    public List<ActivityMessageSO> getCollection() {
+    public List<ActivityRecordSO> getCollection() {
         return collection;
     }
 
-    public void setCollection(List<ActivityMessageSO> collection) {
+    public void setCollection(List<ActivityRecordSO> collection) {
         this.collection = collection;
     }
 }
