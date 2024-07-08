@@ -27,6 +27,7 @@ public class PatientRestoreSO {
     private String programId;
     private boolean blocking;
     private String therapistId;
+    private String projectId;
 
     public PatientRestoreSO() {}
 
@@ -190,17 +191,25 @@ public class PatientRestoreSO {
         this.therapistId = therapistId;
     }
 
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PatientRestoreSO that = (PatientRestoreSO) o;
-        return active == that.active && gender == that.gender && secondFA == that.secondFA && renewPasswordRequired == that.renewPasswordRequired && blocking == that.blocking && userId.equals(that.userId) && Objects.equals(firstActive, that.firstActive) && Objects.equals(lastActive, that.lastActive) && username.equals(that.username) && passwordHash.equals(that.passwordHash) && email.equals(that.email) && firstname.equals(that.firstname) && lastname.equals(that.lastname) && Objects.equals(emailConfirmation, that.emailConfirmation) && Objects.equals(emailConfToken, that.emailConfToken) && Objects.equals(emailConfCode, that.emailConfCode) && programId.equals(that.programId) && therapistId.equals(that.therapistId);
+        return active == that.active && gender == that.gender && secondFA == that.secondFA && renewPasswordRequired == that.renewPasswordRequired && blocking == that.blocking && Objects.equals(userId, that.userId) && Objects.equals(creation, that.creation) && Objects.equals(firstActive, that.firstActive) && Objects.equals(lastActive, that.lastActive) && Objects.equals(username, that.username) && Objects.equals(passwordHash, that.passwordHash) && Objects.equals(email, that.email) && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname) && Objects.equals(emailConfirmation, that.emailConfirmation) && Objects.equals(emailConfToken, that.emailConfToken) && Objects.equals(emailConfCode, that.emailConfCode) && Objects.equals(programId, that.programId) && Objects.equals(therapistId, that.therapistId) && Objects.equals(projectId, that.projectId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId);
+        return Objects.hashCode(userId);
     }
 
 }
