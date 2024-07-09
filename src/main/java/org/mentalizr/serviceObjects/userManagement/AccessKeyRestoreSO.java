@@ -13,6 +13,7 @@ public class AccessKeyRestoreSO {
     private String accessKey;
     private String programId;
     private String therapistId;
+    private String projectId;
 
     public AccessKeyRestoreSO() {}
 
@@ -79,4 +80,13 @@ public class AccessKeyRestoreSO {
     public void setTherapistId(String therapistId) {
         this.therapistId = therapistId;
     }
+
+    public String getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
+    }
+
 }

@@ -10,6 +10,7 @@ public class AccessKeyCreateSO {
     private boolean active;
     private String programId;
     private String therapistId;
+    private String projectId;
 
     public AccessKeyCreateSO() {}
 
@@ -52,4 +53,13 @@ public class AccessKeyCreateSO {
     public void setTherapistId(String therapistId) {
         this.therapistId = therapistId;
     }
+
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
+    }
+
 }
