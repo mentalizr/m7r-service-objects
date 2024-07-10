@@ -62,4 +62,8 @@ public class AccessKeyCreateSO {
         this.projectId = projectId;
     }
 
+    public boolean isAssignedToProject() {
+        return this.projectId != null;
+    }
+
 }
