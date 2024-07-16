@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class TherapistRestoreCollectionSOX {
 
     public static TherapistRestoreCollectionSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, TherapistRestoreCollectionSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, TherapistRestoreCollectionSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(TherapistRestoreCollectionSO therapistRestoreCollectionSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(therapistRestoreCollectionSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(therapistRestoreCollectionSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(TherapistRestoreCollectionSO therapistRestoreCollectionSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(therapistRestoreCollectionSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(therapistRestoreCollectionSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

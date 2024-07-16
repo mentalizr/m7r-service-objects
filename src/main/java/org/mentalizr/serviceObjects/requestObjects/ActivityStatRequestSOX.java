@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class ActivityStatRequestSOX {
 
     public static ActivityStatRequestSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, ActivityStatRequestSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, ActivityStatRequestSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(ActivityStatRequestSO activityStatRequestSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(activityStatRequestSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(activityStatRequestSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(ActivityStatRequestSO activityStatRequestSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(activityStatRequestSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(activityStatRequestSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

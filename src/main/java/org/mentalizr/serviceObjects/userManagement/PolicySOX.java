@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class PolicySOX {
 
     public static PolicySO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, PolicySO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, PolicySO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(PolicySO policySO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(policySO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(policySO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(PolicySO policySO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(policySO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(policySO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
