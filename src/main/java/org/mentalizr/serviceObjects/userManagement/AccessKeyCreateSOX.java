@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class AccessKeyCreateSOX {
 
     public static AccessKeyCreateSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, AccessKeyCreateSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, AccessKeyCreateSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(AccessKeyCreateSO accessKeyCreateSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(accessKeyCreateSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(accessKeyCreateSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(AccessKeyCreateSO accessKeyCreateSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(accessKeyCreateSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(accessKeyCreateSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
     
 }

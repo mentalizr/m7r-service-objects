@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class PatientStatusCollectionSOX {
 
     public static PatientStatusCollectionSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, PatientStatusCollectionSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, PatientStatusCollectionSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(PatientStatusCollectionSO patientStatusCollectionSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(patientStatusCollectionSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(patientStatusCollectionSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(PatientStatusCollectionSO patientStatusCollectionSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(patientStatusCollectionSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(patientStatusCollectionSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

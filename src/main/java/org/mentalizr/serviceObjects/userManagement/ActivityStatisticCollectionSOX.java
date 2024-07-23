@@ -6,18 +6,27 @@ import javax.json.bind.JsonbConfig;
 
 public class ActivityStatisticCollectionSOX {
     public static ActivityStatisticCollectionSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, ActivityStatisticCollectionSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, ActivityStatisticCollectionSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(ActivityStatisticCollectionSO statisticCollectionSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(statisticCollectionSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(statisticCollectionSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(ActivityStatisticCollectionSO statisticCollectionSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(statisticCollectionSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(statisticCollectionSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

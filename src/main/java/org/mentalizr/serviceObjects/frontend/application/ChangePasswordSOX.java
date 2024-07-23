@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class ChangePasswordSOX {
 
     public static ChangePasswordSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, ChangePasswordSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, ChangePasswordSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(ChangePasswordSO changePasswordSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(changePasswordSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(changePasswordSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(ChangePasswordSO changePasswordSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(changePasswordSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(changePasswordSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

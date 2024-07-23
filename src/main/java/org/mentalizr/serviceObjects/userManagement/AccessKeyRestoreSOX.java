@@ -7,18 +7,27 @@ import javax.json.bind.JsonbConfig;
 public class AccessKeyRestoreSOX {
 
     public static AccessKeyRestoreSO fromJson(String json) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.fromJson(json, AccessKeyRestoreSO.class);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.fromJson(json, AccessKeyRestoreSO.class);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJson(AccessKeyRestoreSO accessKeyRestoreSO) {
-        Jsonb jsonb = JsonbBuilder.create();
-        return jsonb.toJson(accessKeyRestoreSO);
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+            return jsonb.toJson(accessKeyRestoreSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String toJsonWithFormatting(AccessKeyRestoreSO accessKeyRestoreSO) {
-        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true));
-        return jsonb.toJson(accessKeyRestoreSO);
+        try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
+            return jsonb.toJson(accessKeyRestoreSO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
     
 }
