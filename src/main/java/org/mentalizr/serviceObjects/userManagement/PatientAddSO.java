@@ -23,6 +23,7 @@ public class PatientAddSO {
     private String programId;
     private boolean blocking;
     private String therapistId;
+    private String projectId;
 
     public PatientAddSO() {}
 
@@ -165,4 +166,13 @@ public class PatientAddSO {
     public void setTherapistId(String therapistId) {
         this.therapistId = therapistId;
     }
+
+    public String getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
+    }
+
 }
