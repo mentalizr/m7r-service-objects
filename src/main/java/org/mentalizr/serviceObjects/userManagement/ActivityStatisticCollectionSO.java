@@ -6,6 +6,7 @@ import java.util.List;
 public class ActivityStatisticCollectionSO {
 
     private List<ProgramStatisticSO> collection;
+    private List<String> projects;
 
     public ActivityStatisticCollectionSO() {
         this.collection = new ArrayList<>();
@@ -18,4 +19,13 @@ public class ActivityStatisticCollectionSO {
     public void setCollection(List<ProgramStatisticSO> collection) {
         this.collection = collection;
     }
+
+    public List<String> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(List<String> projects) {
+        this.projects = projects;
+    }
+
 }
