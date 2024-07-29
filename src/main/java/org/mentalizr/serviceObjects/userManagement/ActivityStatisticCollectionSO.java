@@ -6,7 +6,7 @@ import java.util.List;
 public class ActivityStatisticCollectionSO {
 
     private List<ProgramStatisticSO> collection;
-    private List<String> projects;
+    private List<String> projectLabels;
 
     public ActivityStatisticCollectionSO() {
         this.collection = new ArrayList<>();
@@ -20,12 +20,12 @@ public class ActivityStatisticCollectionSO {
         this.collection = collection;
     }
 
-    public List<String> getProjects() {
-        return projects;
+    public List<String> getProjectLabels() {
+        return projectLabels;
     }
 
-    public void setProjects(List<String> projects) {
-        this.projects = projects;
+    public void setProjectLabels(List<String> projectLabels) {
+        this.projectLabels = projectLabels;
     }
 
 }
