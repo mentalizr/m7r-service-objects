@@ -3,6 +3,7 @@ package org.mentalizr.serviceObjects.userManagement;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class ActivityStatisticCollectionSO {
 
     private List<ProgramStatisticSO> collection;
