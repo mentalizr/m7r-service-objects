@@ -20,4 +20,5 @@ public class PatientRestoreCollectionSO {
     public void setCollection(List<PatientRestoreSO> collection) {
         this.collection = collection;
     }
+
 }

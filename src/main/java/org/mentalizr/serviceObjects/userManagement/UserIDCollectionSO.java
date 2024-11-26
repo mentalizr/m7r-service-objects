@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserIDCollectionSO {
+
     private List<String> collection;
+
     public UserIDCollectionSO() {
         this.collection = new ArrayList<>();
     }
@@ -16,4 +18,5 @@ public class UserIDCollectionSO {
     public void setCollection(List<String> collection) {
         this.collection = collection;
     }
+
 }
