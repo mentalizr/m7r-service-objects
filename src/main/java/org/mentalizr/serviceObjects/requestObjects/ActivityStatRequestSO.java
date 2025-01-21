@@ -3,6 +3,12 @@ package org.mentalizr.serviceObjects.requestObjects;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Specifies parameters for activity statistic calculation.
+ * Hint: to choose all projects set projectsIncludeMode to false (= projects exclude mode) and leave set of
+ * projects empty. choose all programs: accordingly.
+ */
+@SuppressWarnings("unused")
 public class ActivityStatRequestSO {
     private Long fromTimestamp;
     private Long untilTimestamp;
