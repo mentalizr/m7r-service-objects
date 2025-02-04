@@ -1,5 +1,7 @@
 package org.mentalizr.serviceObjects.requestObjects;
 
+import de.arthurpicht.utils.core.strings.Strings;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -72,6 +74,18 @@ public class ActivityStatRequestSO {
 
     public void setProgramsIncludeMode(boolean programsIncludeMode) {
         this.programsIncludeMode = programsIncludeMode;
+    }
+
+    @Override
+    public String toString() {
+        return "ActivityStatRequestSO{" +
+                "fromTimestamp=" + fromTimestamp +
+                ", untilTimestamp=" + untilTimestamp +
+                ", projects={" + Strings.listing(projects, ", ") + "}" +
+                ", projectsIncludeMode=" + projectsIncludeMode +
+                ", programs={" + Strings.listing(programs, ", ") + "}" +
+                ", programsIncludeMode=" + programsIncludeMode +
+                '}';
     }
 
 }
