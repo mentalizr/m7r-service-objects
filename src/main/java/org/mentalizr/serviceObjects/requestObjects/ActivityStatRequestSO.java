@@ -3,6 +3,7 @@ package org.mentalizr.serviceObjects.requestObjects;
 import de.arthurpicht.utils.core.strings.Strings;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -86,6 +87,18 @@ public class ActivityStatRequestSO {
                 ", programs={" + Strings.listing(programs, ", ") + "}" +
                 ", programsIncludeMode=" + programsIncludeMode +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ActivityStatRequestSO that = (ActivityStatRequestSO) o;
+        return projectsIncludeMode == that.projectsIncludeMode && programsIncludeMode == that.programsIncludeMode && Objects.equals(fromTimestamp, that.fromTimestamp) && Objects.equals(untilTimestamp, that.untilTimestamp) && Objects.equals(projects, that.projects) && Objects.equals(programs, that.programs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fromTimestamp, untilTimestamp, projects, projectsIncludeMode, programs, programsIncludeMode);
     }
 
 }
