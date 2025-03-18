@@ -26,6 +26,14 @@ public class UserListQuerySO {
         this.programName = programName;
     }
 
+    public boolean isProject() {
+        return projectName != null && !projectName.isEmpty();
+    }
+
+    public boolean isProgram() {
+        return programName != null && !programName.isEmpty();
+    }
+
     @Override
     public String toString() {
         return "UserListQuerySOX{" +
