@@ -27,11 +27,11 @@ public class UserListQuerySO {
     }
 
     public boolean isProject() {
-        return projectName != null && !projectName.isEmpty();
+        return !projectName.isBlank();
     }
 
     public boolean isProgram() {
-        return programName != null && !programName.isEmpty();
+        return !programName.isBlank();
     }
 
     @Override
