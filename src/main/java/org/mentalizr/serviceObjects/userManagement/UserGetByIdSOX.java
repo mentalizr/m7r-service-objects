@@ -4,25 +4,25 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 
-public class AccessKeyGetSOX {
+public class UserGetByIdSOX {
 
-    public static AccessKeyGetSO fromJson(String json) {
+    public static UserGetByIdSO fromJson(String json) {
         try (Jsonb jsonb = JsonbBuilder.create()) {
-            return jsonb.fromJson(json, AccessKeyGetSO.class);
+            return jsonb.fromJson(json, UserGetByIdSO.class);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static String toJson(AccessKeyGetSO accessKeyGetSO) {
+    public static String toJson(UserGetByIdSO userGetByIDSO) {
         try (Jsonb jsonb = JsonbBuilder.create()) {
-            return jsonb.toJson(accessKeyGetSO);
+            return jsonb.toJson(userGetByIDSO);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static String toJsonWithFormatting(AccessKeyGetExpiredUnusedSO accessKeyGetSO) {
+    public static String toJsonWithFormatting(UserGetByIdSO accessKeyGetSO) {
         try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
             return jsonb.toJson(accessKeyGetSO);
         } catch (Exception e) {
