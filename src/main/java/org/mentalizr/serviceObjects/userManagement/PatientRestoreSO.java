@@ -200,6 +200,32 @@ public class PatientRestoreSO {
     }
 
     @Override
+    public String toString() {
+        return "PatientRestoreSO{" +
+                "userId='" + userId + '\'' +
+                ", active=" + active +
+                ", creation=" + creation +
+                ", firstActive=" + firstActive +
+                ", lastActive=" + lastActive +
+                ", username='" + username + '\'' +
+                ", passwordHash='" + passwordHash + '\'' +
+                ", email='" + email + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", gender=" + gender +
+                ", secondFA=" + secondFA +
+                ", emailConfirmation=" + emailConfirmation +
+                ", emailConfToken='" + emailConfToken + '\'' +
+                ", emailConfCode='" + emailConfCode + '\'' +
+                ", renewPasswordRequired=" + renewPasswordRequired +
+                ", programId='" + programId + '\'' +
+                ", blocking=" + blocking +
+                ", therapistId='" + therapistId + '\'' +
+                ", projectId='" + projectId + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
