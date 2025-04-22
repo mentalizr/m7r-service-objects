@@ -1,5 +1,7 @@
 package org.mentalizr.serviceObjects.base;
 
+import de.arthurpicht.utils.core.strings.Strings;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
@@ -88,4 +90,17 @@ public class ConsistencyCheckResultSO {
         this.nrOfRoleTherapists = nrOfRoleTherapists;
     }
 
+    @Override
+    public String toString() {
+        return "ConsistencyCheckResultSO{" +
+                "consistent=" + consistent +
+                ", messages=" + Strings.listing(messages, ", ", "{", "}") +
+                ", nrOfUsers=" + nrOfUsers +
+                ", nrOfUserLogin=" + nrOfUserLogin +
+                ", nrOfUserAccessKeys=" + nrOfUserAccessKeys +
+                ", nrOfRolePatients=" + nrOfRolePatients +
+                ", nrOfRoleAdmins=" + nrOfRoleAdmins +
+                ", nrOfRoleTherapists=" + nrOfRoleTherapists +
+                '}';
+    }
 }
