@@ -2,43 +2,43 @@ package org.mentalizr.serviceObjects.requestObjects;
 
 public class UserListQuerySO {
 
-    private String projectName;
-    private String programName;
+    private String project;
+    private String program;
 
     public UserListQuerySO() {
-        this.projectName = "";
-        this.programName = "";
+        this.project = null;
+        this.program = null;
     }
 
-    public String getProjectName() {
-        return projectName;
+    public String getProject() {
+        return project;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setProject(String project) {
+        this.project = project;
     }
 
-    public String getProgramName() {
-        return programName;
+    public String getProgram() {
+        return program;
     }
 
-    public void setProgramName(String programName) {
-        this.programName = programName;
+    public void setProgram(String program) {
+        this.program = program;
     }
 
-    public boolean isProject() {
-        return !projectName.isBlank();
+    public boolean hasProject() {
+        return this.project != null;
     }
 
-    public boolean isProgram() {
-        return !programName.isBlank();
+    public boolean hasProgram() {
+        return this.program != null;
     }
 
     @Override
     public String toString() {
-        return "UserListQuerySOX{" +
-                "projectName='" + projectName + '\'' +
-                ", programName='" + programName + '\'' +
+        return "UserListQuerySO{" +
+                "projectName='" + project + '\'' +
+                ", programName='" + program + '\'' +
                 '}';
     }
 
