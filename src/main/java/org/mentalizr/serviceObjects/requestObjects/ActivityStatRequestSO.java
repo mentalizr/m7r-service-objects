@@ -8,8 +8,8 @@ import java.util.Set;
 
 /**
  * Specifies parameters for activity statistic calculation.
- * Hint: to choose all projects set projectsIncludeMode to false (= projects exclude mode) and leave set of
- * projects empty. choose all programs: accordingly.
+ * Hint: To choose all projects set projectsIncludeMode to false (= projects exclude mode) and leave the set of
+ * projects empty. To choose all programs proceed accordingly.
  */
 @SuppressWarnings("unused")
 public class ActivityStatRequestSO {
