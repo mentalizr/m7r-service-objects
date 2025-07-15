@@ -2,15 +2,12 @@ package org.mentalizr.serviceObjects.userManagement;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-// TODO Ablösen durch AccessKeySO
-
-@Deprecated
 @XmlRootElement
-public class AccessKeyGetSO {
+public class AccessKeySO {
 
     private String accessKey;
 
-    public AccessKeyGetSO() {}
+    public AccessKeySO() {}
 
     public String getAccessKey() {
         return this.accessKey;

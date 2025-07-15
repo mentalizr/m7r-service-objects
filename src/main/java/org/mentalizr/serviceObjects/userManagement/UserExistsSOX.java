@@ -4,28 +4,27 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 
-@Deprecated
-public class AccessKeyGetSOX {
+public class UserExistsSOX {
 
-    public static AccessKeyGetSO fromJson(String json) {
+    public static UserExistsSO fromJson(String json) {
         try (Jsonb jsonb = JsonbBuilder.create()) {
-            return jsonb.fromJson(json, AccessKeyGetSO.class);
+            return jsonb.fromJson(json, UserExistsSO.class);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static String toJson(AccessKeyGetSO accessKeyGetSO) {
+    public static String toJson(UserExistsSO userExistsSO) {
         try (Jsonb jsonb = JsonbBuilder.create()) {
-            return jsonb.toJson(accessKeyGetSO);
+            return jsonb.toJson(userExistsSO);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static String toJsonWithFormatting(AccessKeyGetSO accessKeyGetSO) {
+    public static String toJsonWithFormatting(UserExistsSO userExistsSO) {
         try (Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withFormatting(true))) {
-            return jsonb.toJson(accessKeyGetSO);
+            return jsonb.toJson(userExistsSO);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
