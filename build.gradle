@@ -17,7 +17,7 @@ dependencies {
     implementation libs.jersey.media.json.binding
 
     testImplementation libs.junit.jupiter
-    testRuntimeOnly libs.junit.engine
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 test {
