@@ -17,6 +17,12 @@ public class ConsistencyCheckResultSO {
     private int nrOfRolePatients;
     private int nrOfRoleAdmins;
     private int nrOfRoleTherapists;
+    private long nrOfActivityRecords;
+    private long nrOfFormDataDocuments;
+    private long nrOfPatientStatusDocuments;
+    private int nrOfUsersWithActivityRecords;
+    private int nrOfUsersWithFormDataDocuments;
+    private int nrOfUsersWithPatientStatusDocuments;
 
     public ConsistencyCheckResultSO() {
         this.messages = new ArrayList<>();
@@ -90,6 +96,54 @@ public class ConsistencyCheckResultSO {
         this.nrOfRoleTherapists = nrOfRoleTherapists;
     }
 
+    public long getNrOfActivityRecords() {
+        return nrOfActivityRecords;
+    }
+
+    public void setNrOfActivityRecords(long nrOfActivityRecords) {
+        this.nrOfActivityRecords = nrOfActivityRecords;
+    }
+
+    public long getNrOfFormDataDocuments() {
+        return nrOfFormDataDocuments;
+    }
+
+    public void setNrOfFormDataDocuments(long nrOfFormDataDocuments) {
+        this.nrOfFormDataDocuments = nrOfFormDataDocuments;
+    }
+
+    public long getNrOfPatientStatusDocuments() {
+        return nrOfPatientStatusDocuments;
+    }
+
+    public void setNrOfPatientStatusDocuments(long nrOfPatientStatusDocuments) {
+        this.nrOfPatientStatusDocuments = nrOfPatientStatusDocuments;
+    }
+
+    public int getNrOfUsersWithActivityRecords() {
+        return nrOfUsersWithActivityRecords;
+    }
+
+    public void setNrOfUsersWithActivityRecords(int nrOfUsersWithActivityRecords) {
+        this.nrOfUsersWithActivityRecords = nrOfUsersWithActivityRecords;
+    }
+
+    public int getNrOfUsersWithFormDataDocuments() {
+        return nrOfUsersWithFormDataDocuments;
+    }
+
+    public void setNrOfUsersWithFormDataDocuments(int nrOfUsersWithFormDataDocuments) {
+        this.nrOfUsersWithFormDataDocuments = nrOfUsersWithFormDataDocuments;
+    }
+
+    public int getNrOfUsersWithPatientStatusDocuments() {
+        return nrOfUsersWithPatientStatusDocuments;
+    }
+
+    public void setNrOfUsersWithPatientStatusDocuments(int nrOfUsersWithPatientStatusDocuments) {
+        this.nrOfUsersWithPatientStatusDocuments = nrOfUsersWithPatientStatusDocuments;
+    }
+
     @Override
     public String toString() {
         return "ConsistencyCheckResultSO{" +
@@ -101,6 +155,13 @@ public class ConsistencyCheckResultSO {
                 ", nrOfRolePatients=" + nrOfRolePatients +
                 ", nrOfRoleAdmins=" + nrOfRoleAdmins +
                 ", nrOfRoleTherapists=" + nrOfRoleTherapists +
+                ", nrOfActivityRecords=" + nrOfActivityRecords +
+                ", nrOfFormDataDocuments=" + nrOfFormDataDocuments +
+                ", nrOfPatientStatusDocuments=" + nrOfPatientStatusDocuments +
+                ",  nrOfUsersWithActivityRecords=" + nrOfUsersWithActivityRecords +
+                ", nrOfUsersWithFormDataDocuments=" + nrOfUsersWithFormDataDocuments +
+                ", nrOfUsersWithPatientStatusDocuments=" + nrOfUsersWithPatientStatusDocuments +
                 '}';
     }
+
 }
